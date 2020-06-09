@@ -6,6 +6,13 @@ import UserCard from "./UserCard";
 import Users from "./Users";
 import styled from "styled-components";
 
+const AppWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Lexend Tera', sans-serif;
+`
+
 class App extends React.Component {
   constructor() {
     super();
@@ -25,7 +32,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="app">
+      <AppWrapper className="app">
         <h1>My profile</h1>
         <UserCard
           imgUrl={this.state.avatar_url}
@@ -36,7 +43,7 @@ class App extends React.Component {
         />
         <h2>Followers</h2>
         <Users usersUrl={this.state.followers_url}/>
-      </div>
+      </AppWrapper>
     );
   }
 }
