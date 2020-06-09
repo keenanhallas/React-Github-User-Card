@@ -33,14 +33,8 @@ class App extends React.Component {
           bio={this.state.bio}
           location={this.state.location}
         />
-        <h2>Following</h2>
-        <Users
-          usersUrl={this.state.following_url}
-        />
         <h2>Followers</h2>
-        <Users
-          usersUrl={this.state.followers_url}
-        />
+        <Users usersUrl={this.state.followers_url}/>
       </div>
     );
   }
