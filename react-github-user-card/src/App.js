@@ -4,6 +4,7 @@ import './App.css';
 import axios from "axios";
 import UserCard from "./UserCard";
 import Users from "./Users";
+import styled from "styled-components";
 
 class App extends React.Component {
   constructor() {

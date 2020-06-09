@@ -10,9 +10,8 @@ class Users extends React.Component {
         };
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps) {
         if(prevProps !== this.props){
-            console.log(this.props);
             axios
                 .get(`${this.props.usersUrl}`)
                 .then(res => {
@@ -38,7 +37,7 @@ class Users extends React.Component {
                             name={user.name}
                             bio={user.bio}
                             location={user.location}
-                    />
+                        />
                     );
                 })}
             </div>
